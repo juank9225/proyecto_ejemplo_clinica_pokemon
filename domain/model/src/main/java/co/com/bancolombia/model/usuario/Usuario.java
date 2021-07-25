@@ -1,4 +1,5 @@
 package co.com.bancolombia.model.usuario;
+import co.com.bancolombia.model.usuario.valuesobjects.Name;
 import com.sun.org.apache.xpath.internal.operations.String;
 import lombok.Builder;
 import lombok.Data;
@@ -7,7 +8,7 @@ import lombok.Data;
 @Builder(toBuilder = true)
 public class Usuario {
     private String id;
-    private String nombre;
+    private Name nombre;
     private String apellido;
     private String telefono;
     private String profesion;
@@ -16,7 +17,7 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String id, String nombre, String apellido, String telefono, String profesion, String correo) {
+    public Usuario(String id, Name nombre, String apellido, String telefono, String profesion, String correo) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -33,11 +34,11 @@ public class Usuario {
         this.id = id;
     }
 
-    public String getNombre() {
+    public Name getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(Name nombre) {
         this.nombre = nombre;
     }
 
