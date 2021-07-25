@@ -1,5 +1,5 @@
 package co.com.bancolombia.model.usuario;
-import co.com.bancolombia.model.usuario.valuesobjects.Name;
+import co.com.bancolombia.model.usuario.valuesobjects.*;
 import com.sun.org.apache.xpath.internal.operations.String;
 import lombok.Builder;
 import lombok.Data;
@@ -8,16 +8,16 @@ import lombok.Data;
 @Builder(toBuilder = true)
 public class Usuario {
     private String id;
-    private Name nombre;
-    private String apellido;
-    private String telefono;
-    private String profesion;
-    private String correo;
+    private Nombre nombre;
+    private Apellido apellido;
+    private Telefono telefono;
+    private Profesion profesion;
+    private Correo correo;
 
     public Usuario() {
     }
 
-    public Usuario(String id, Name nombre, String apellido, String telefono, String profesion, String correo) {
+    public Usuario(String id, Nombre nombre, Apellido apellido, Telefono telefono, Profesion profesion, Correo correo) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -34,43 +34,43 @@ public class Usuario {
         this.id = id;
     }
 
-    public Name getNombre() {
+    public Nombre getNombre() {
         return nombre;
     }
 
-    public void setNombre(Name nombre) {
+    public void setNombre(Nombre nombre) {
         this.nombre = nombre;
     }
 
-    public String getApellido() {
+    public Apellido getApellido() {
         return apellido;
     }
 
-    public void setApellido(String apellido) {
+    public void setApellido(Apellido apellido) {
         this.apellido = apellido;
     }
 
-    public String getTelefono() {
+    public Telefono getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(Telefono telefono) {
         this.telefono = telefono;
     }
 
-    public String getProfesion() {
+    public Profesion getProfesion() {
         return profesion;
     }
 
-    public void setProfesion(String profesion) {
+    public void setProfesion(Profesion profesion) {
         this.profesion = profesion;
     }
 
-    public String getCorreo() {
+    public Correo getCorreo() {
         return correo;
     }
 
-    public void setCorreo(String correo) {
+    public void setCorreo(Correo correo) {
         this.correo = correo;
     }
 }
